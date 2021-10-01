@@ -10,24 +10,27 @@ public class Main {
 			} else {
 				System.out.println("Enter next equation");
 			}
-   			String eq = myobj.nextLine();
+			String eq = myobj.nextLine();
         		Base t = new Base();
-				Extra v = new Extra();
-				if (eq.contains(".")) {
-					System.out.println(v.Sqrt(eq));
-				}
-				else if (eq.contains("*")) {
-					System.out.println(t.Multiplication(eq));
-				}
-				else if (eq.contains("/")) {
-					System.out.println(t.Division(eq)); 
-				}
-        			else if (eq.contains("+")) {
-        	    			System.out.println(t.Addition(eq));
-        			}
-				else if (eq.contains("-")) {
-        	    			System.out.println(t.Subtraction(eq));
-        			}
+			Extra v = new Extra();
+			if (eq.contains(".")) {
+				System.out.println(v.Sqrt(eq));
+			}
+			else if (eq.contains("^")) {
+        			System.out.println(v.Exponent(eq));
+        		}
+			else if (eq.contains("*")) {
+				System.out.println(t.Multiplication(eq));
+			}
+			else if (eq.contains("/")) {
+				System.out.println(t.Division(eq)); 
+			}
+        		else if (eq.contains("+")) {
+        	    		System.out.println(t.Addition(eq));
+        		}
+			else if (eq.contains("-")) {
+        	    		System.out.println(t.Subtraction(eq));
+        		}
 		}
     	}
 }
