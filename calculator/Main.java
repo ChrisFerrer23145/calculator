@@ -5,7 +5,7 @@ public class Main {
 		int i = 0;
 		for (i=0;i<i+1;i++) {
         		Scanner myobj = new Scanner(System.in);
-			if (i>0) {
+			if (i==0) {
         			System.out.println("Enter equation. For addition, use a + between each number. For subtraction, use a -. For multiplication use *, and for division use /. For example, to do addition, you would do '691+234', which would print 925");
 			} else {
 				System.out.println("Enter next equation");
