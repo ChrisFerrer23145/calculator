@@ -16,18 +16,21 @@ public class Main {
 			Components c = new Components();
 			int inc = 0;
 			String[] flags = {".", "^", "*", "/", "+", "-"};
+			String order = "";
 			int counter = 0;
 			for(inc=0;inc<flags.length;inc++) {
 				if (eq.contains(flags[inc])) {
 					int c2 = eq.indexOf(flags[inc]);
 					if (eq.indexOf(flags[inc], c2 + 1)) {
 						counter++;
+						order += flags[inc];
 					}
 					counter++;
+					order += flags[inc];
 				}
 			}
 			if (counter > 1) {
-				System.out.println(c.Handle(eq));
+				System.out.println(c.Handle(eq, counter, order));
 			}
 			else if (eq.contains(".")) {
 				System.out.println(e.Sqrt(eq));
