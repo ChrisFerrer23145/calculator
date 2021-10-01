@@ -16,11 +16,11 @@ public class Main {
 			else if (eq.contains("/")) {
 				System.out.println(t.Division(eq)); 
 			}
-        	else if (eq.contains("+")) {
-        	    System.out.println(t.Addition(eq));
-        	}
+        		else if (eq.contains("+")) {
+        	    		System.out.println(t.Addition(eq));
+        		}
 			else if (eq.contains("-")) {
-        	    System.out.println(t.Subtraction(eq));
-        	}
+        	    		System.out.println(t.Subtraction(eq));
+        		}
     	}
 }
