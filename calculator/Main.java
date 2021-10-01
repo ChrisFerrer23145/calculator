@@ -11,25 +11,41 @@ public class Main {
 				System.out.println("Enter next equation");
 			}
 			String eq = myobj.nextLine();
-        		Base t = new Base();
-			Extra v = new Extra();
-			if (eq.contains(".")) {
-				System.out.println(v.Sqrt(eq));
+        		Base b = new Base();
+			Extra e = new Extra();
+			Components c = new Components();
+			int inc = 0;
+			String[] flags = {".", "^", "*", "/", "+", "-"};
+			int counter = 0;
+			for(inc=0;inc<flags.length;inc++) {
+				if (eq.contains(flags[inc])) {
+					int c2 = eq.indexOf(flags[inc]);
+					if (eq.indexOf(flags[inc], c2 + 1)) {
+						counter++;
+					}
+					counter++;
+				}
+			}
+			if (counter > 1) {
+				System.out.println(c.Handle(eq));
+			}
+			else if (eq.contains(".")) {
+				System.out.println(e.Sqrt(eq));
 			}
 			else if (eq.contains("^")) {
-        			System.out.println(v.Exponent(eq));
+        			System.out.println(e.Exponent(eq));
         		}
 			else if (eq.contains("*")) {
-				System.out.println(t.Multiplication(eq));
+				System.out.println(b.Multiplication(eq));
 			}
 			else if (eq.contains("/")) {
-				System.out.println(t.Division(eq)); 
+				System.out.println(b.Division(eq)); 
 			}
         		else if (eq.contains("+")) {
-        	    		System.out.println(t.Addition(eq));
+        	    		System.out.println(b.Addition(eq));
         		}
 			else if (eq.contains("-")) {
-        	    		System.out.println(t.Subtraction(eq));
+        	    		System.out.println(b.Subtraction(eq));
         		}
 		}
     	}
