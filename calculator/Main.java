@@ -18,16 +18,8 @@ public class Main {
 			String[] flags = {".", "^", "*", "/", "+", "-"};
 			String order = "";
 			int counter = 0;
-			for(inc=0;inc<flags.length;inc++) {
-				if (eq.contains(flags[inc])) {
-					int c2 = eq.indexOf(flags[inc]);
-					if (eq.indexOf(flags[inc], c2 + 1)) {
-						counter++;
-						order += flags[inc];
-					}
-					counter++;
-					order += flags[inc];
-				}
+			for(inc=0;eq.length;inc++) {
+				c.Determine(eq[inc], order);
 			}
 			if (counter > 1) {
 				System.out.println(c.Handle(eq, counter, order));
