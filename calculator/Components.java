@@ -14,11 +14,11 @@ public class Components {
 
     public String Handle(String equation, int num, String order) {
         int i = 0;
-        int t1 = -1;
         Extra e = new Extra();
         Base b = new Base();
         String[] flags = {".", "^", "*", "/", "+", "-"};
         for (i=0;i<order.length();i++) {
+            int t1 = -1;
             if (Character.toString(order.charAt(i)).equals(flags[0])) {
                 int test = equation.indexOf(".");
                 int t2 = equation.indexOf(order.charAt(i+1));
