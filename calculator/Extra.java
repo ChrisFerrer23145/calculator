@@ -1,10 +1,10 @@
 public class Extra {
-    static double Sqrt(String equation){
+    double Sqrt(String equation){
         int point = equation.indexOf(".");
         double st2 = Integer.parseInt(equation.substring(point + 1));
         return((Math.sqrt(st2)));
     }
-    static double Exponent(String equation){
+    double Exponent(String equation){
         int point = equation.indexOf("^");
         int st1 = Integer.parseInt(equation.substring(0, point));
         int st2 = Integer.parseInt(equation.substring(point + 1));
