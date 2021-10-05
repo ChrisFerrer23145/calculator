@@ -14,7 +14,7 @@ public class Main {
 			Extra e = new Extra();
 			Components c = new Components();
 			int inc = 0;
-			// String[] flags = {".", "^", "*", "/", "+", "-"};
+			// String[] flags = {"%", "^", "*", "/", "+", "-"};
 			String order = "";
 			int counter = 0;
 			for(inc=0;inc < eq.length();inc++) {
