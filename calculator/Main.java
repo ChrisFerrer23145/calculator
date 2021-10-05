@@ -5,7 +5,7 @@ public class Main {
 		for (i=0;i<i+1;i++) {
         	Scanner myobj = new Scanner(System.in);
 			if (i==0) {
-        			System.out.println("Enter equation. For addition, use a + between each number. For subtraction, use a -. For multiplication use *, and for division use /. Square roots use periods, so '.25' prints 5. Exponents use ^, so '5^3' prints 125. For example, to do addition, you would use '691+234', which would print 925.");
+        			System.out.println("Enter equation. For addition, use a + between each number. For subtraction, use a -. For multiplication use *, and for division use /. Square roots use percents, so '%25' prints 5. Exponents use ^, so '5^3' prints 125. For example, to do addition, you would use '691+234', which would print 925.");
 			} else {
 				System.out.println("Enter next equation");
 			}
@@ -24,7 +24,7 @@ public class Main {
 			if (counter > 1) {
 				System.out.println(c.Handle(eq, counter, order));
 			}
-			else if (eq.contains(".")) {
+			else if (eq.contains("%")) {
 				System.out.println(e.Sqrt(eq));
 			}
 			else if (eq.contains("^")) {
