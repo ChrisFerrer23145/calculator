@@ -22,7 +22,7 @@ public class Main {
 			}
 			counter = order.length();
 			if (counter > 1) {
-				System.out.println(c.Handle(eq, counter, order));
+				System.out.println(c.Handle(eq, order));
 			}
 			else if (eq.contains("%")) {
 				System.out.println(e.Sqrt(eq));
