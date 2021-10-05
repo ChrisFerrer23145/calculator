@@ -12,7 +12,7 @@ public class Components {
         return order;
     }
 
-    public String Handle(String equation, int num, String order) {
+    public String Handle(String equation, String order) {
         int i = 0;
         Extra e = new Extra();
         Base b = new Base();
