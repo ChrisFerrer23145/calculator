@@ -73,7 +73,6 @@ public class Components {
                 order = order.substring(0, orem) + order.substring(orem + 1);
             }
         }
-        
         return equation;
     }
 }
