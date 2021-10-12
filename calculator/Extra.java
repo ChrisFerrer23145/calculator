@@ -21,7 +21,7 @@ public class Extra {
             eq1 = equation.substring(0, point) + ".0";
             st1 = Double.parseDouble(eq1);
         } else {
-            st1 = Double.parseDouble(equation.substring(point + 1));
+            st1 = Double.parseDouble(equation.substring(0, point));
         }
         if (!equation.substring(point + 1).contains(".")) {
             eq2 = equation.substring(point + 1) + ".0";
