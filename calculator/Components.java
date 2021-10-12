@@ -148,7 +148,7 @@ public class Components {
                             int t5 = equation.length() - t4.length() + t4.indexOf(t3);
                             System.out.println(equation.substring(0, t5));
                             double n = b.Subtraction(equation.substring(0, t5));
-                            String a1 = equation.substring(t2);
+                            String a1 = equation.substring(test + 1);
                             int a2 = a1.indexOf(t3) + equation.substring(0, t2).length();
                             equation = n + equation.substring(a2);
                         } else if (t2 == order.length() - 1) {
@@ -208,7 +208,7 @@ public class Components {
                             int t5 = equation.length() - t4.length() + t4.indexOf(t3);
                             System.out.println(equation.substring(0, t5));
                             double n = b.Multiplication(equation.substring(0, t5));
-                            String a1 = equation.substring(t2);
+                            String a1 = equation.substring(test + 1);
                             int a2 = a1.indexOf(t3) + equation.substring(0, t2).length();
                             equation = n + equation.substring(a2);
                         } else if (t2 == order.length() - 1) {
@@ -254,7 +254,7 @@ public class Components {
                             int t5 = equation.length() - t4.length() + t4.indexOf(t3);
                             System.out.println(equation.substring(0, t5));
                             double n = b.Division(equation.substring(0, t5));
-                            String a1 = equation.substring(t2);
+                            String a1 = equation.substring(test + 1);
                             int a2 = a1.indexOf(t3) + equation.substring(0, t2).length();
                             equation = n + equation.substring(a2);
                         } else if (t2 == order.length() - 1) {
