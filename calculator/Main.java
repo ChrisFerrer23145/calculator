@@ -22,7 +22,12 @@ public class Main {
 			}
 			counter = order.length();
 			if (counter > 1) {
-				System.out.println(c.Handle(eq, order));
+                String equation = c.Handle(eq, order);
+                int eqs = equation.indexOf("=");
+                equation = c.MDo(equation.substring(0, eqs), equation.substring(eqs + 1));
+                eqs = equation.indexOf("=");
+                equation = c.ASo(equation.substring(0, eqs), equation.substring(eqs + 1));
+                System.out.println(equation);
 			}
 			else if (eq.contains("%")) {
 				System.out.println(e.Sqrt(eq));
