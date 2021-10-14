@@ -7,7 +7,6 @@ public class Base {
         double st2;
         if (!equation.substring(0, point).contains(".")) {
             eq1 = equation.substring(0, point) + ".0";
-            System.out.println(eq1);
             st1 = Double.parseDouble(eq1);
         } else {
             st1 = Double.parseDouble(equation.substring(0, point));
