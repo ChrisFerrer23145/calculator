@@ -141,7 +141,7 @@ public class Components {
         Base b = new Base();
         for (i=0;i<order.length();i = i) {
             if (equation.contains(flags[2]) || equation.contains(flags[3])) {
-                if (((equation.indexOf(flags[2]) < equation.indexOf(flags[3])) && equation.indexOf(flags[3]) != -1) || (equation.indexOf(flags[3]) == -1 && equation.indexOf(flags[2]) != -1)) {
+                if (((equation.indexOf(flags[2]) < equation.indexOf(flags[3])) && equation.indexOf(flags[3]) != -1 && equation.contains(flags[2])) || (equation.contains(flags[2]) && !equation.contains(flags[3]))) {
                         int test = equation.indexOf("*");
                         int t2 = order.indexOf("*");
                         if (order.length() == 1) {
