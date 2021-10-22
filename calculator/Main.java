@@ -14,7 +14,7 @@ public class Main {
 			Extra e = new Extra();
 			Components c = new Components();
 			int inc = 0;
-			// String[] flags = {"%", "^", "*", "/", "+", "-"};
+			// String[] flags = {"%", "^", "*", "/", "+", "-", "(", ")"};
 			String order = "";
 			int counter = 0;
 			for(inc=0;inc < eq.length();inc++) {
@@ -23,7 +23,7 @@ public class Main {
 			counter = order.length();
 			if (counter > 1) {
 				String equation = e.SendOff(eq, order);
-                		System.out.println(equation);
+                System.out.println(equation);
 			}
 			else if (eq.contains("%")) {
 				System.out.println(e.Sqrt(eq));
