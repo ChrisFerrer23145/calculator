@@ -22,11 +22,7 @@ public class Main {
 			}
 			counter = order.length();
 			if (counter > 1) {
-                String equation = c.Handle(eq, order);
-                int eqs = equation.indexOf("=");
-                equation = c.MDo(equation.substring(0, eqs), equation.substring(eqs + 1));
-                eqs = equation.indexOf("=");
-                equation = c.ASo(equation.substring(0, eqs), equation.substring(eqs + 1));
+				equation = e.SendOff(equation, eq, order);
                 System.out.println(equation);
 			}
 			else if (eq.contains("%")) {
