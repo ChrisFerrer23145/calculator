@@ -1,4 +1,14 @@
 public class Extra {
+    Components c = new Components();
+    double SendOff(String equation, String order) {
+            equation = c.Handle(eq, order);
+            int eqs = equation.indexOf("=");
+            equation = c.MDo(equation.substring(0, eqs), equation.substring(eqs + 1));
+            eqs = equation.indexOf("=");
+            equation = c.ASo(equation.substring(0, eqs), equation.substring(eqs + 1));
+            double equation2 = Double.parseDouble(equation);
+            return equation2;
+    }
     double Sqrt(String equation){
         String eq2;
         double st2;
