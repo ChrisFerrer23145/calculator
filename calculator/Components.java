@@ -1,6 +1,6 @@
 import java.util.Set;
 public class Components {
-    String[] flags = {"%", "^", "*", "/", "+", "-"};
+    String[] flags = {"%", "^", "*", "/", "+", "-", "(", ")"};
     public String Determine(String chara, String order) {
         int i = 0;
         for (i=0;i<flags.length;i++) {
