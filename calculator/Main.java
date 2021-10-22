@@ -22,8 +22,8 @@ public class Main {
 			}
 			counter = order.length();
 			if (counter > 1) {
-				equation = e.SendOff(equation, eq, order);
-                System.out.println(equation);
+				String equation = e.SendOff(eq, order);
+                		System.out.println(equation);
 			}
 			else if (eq.contains("%")) {
 				System.out.println(e.Sqrt(eq));
