@@ -2,18 +2,30 @@ public class Extra {
     Components c = new Components();
     double SendOff(String equation, String order) {
         int i = 0;
-        for(i=0;i<order.length();i++) {
+        for(i=0;i<1;i++) {
+            System.out.println(equation);
             if (order.contains("(")){
                 int x = equation.indexOf("(");
                 int y = equation.indexOf(")");
                 String eq = equation.substring(x + 1, y);
+                int inc = 0;
+                String ordx = "";
                 for(inc=0;inc < eq.length();inc++) {
-				    String ordx = c.Determine(Character.toString(eq.charAt(inc)), "");
+				    ordx = c.Determine(Character.toString(eq.charAt(inc)), "");
 			    }
+			    System.out.println(SendOff(eq, ordx));
                 equation = equation.substring(0, x) + SendOff(eq, ordx) + equation.substring(y + 1);
+                System.out.println(equation);
+                for(inc=0;inc < eq.length();inc++) {
+				    order = c.Determine(Character.toString(eq.charAt(inc)), "");
+                }
             }
         }
-        equation = c.Handle(eq, order);
+        order = "";
+        for(i=0;i < equation.length();i++) {
+			order = c.Determine(Character.toString(equation.charAt(i)), order);
+		}
+        equation = c.Handle(equation, order);
         int eqs = equation.indexOf("=");
         equation = c.MDo(equation.substring(0, eqs), equation.substring(eqs + 1));
         eqs = equation.indexOf("=");
