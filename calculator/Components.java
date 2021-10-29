@@ -37,12 +37,9 @@ public class Components {
             } else if (equation.contains(flags[1])) {
                 int test = equation.indexOf("^");
                 int t2 = order.indexOf("^");
-                if (t2 == 0) {
-                    String t3 = Character.toString(order.charAt(t2 + 1));
-                    String t4 = equation.substring(test);
-                    int t5 = equation.length() - t4.length() + t4.indexOf(t3);
-                    double n = e.Exponent(equation.substring(0, t5));
-                    equation = n + equation.substring(t5);
+                if (order.length() == 1) {
+                    double n = e.Exponent(equation);
+                    equation = n + "";
                 } else if (t2 == order.length() - 1) {
                     String x = Character.toString(order.charAt(t2 - 1));
                     int y = 0;
@@ -55,6 +52,12 @@ public class Components {
                     }
                     double n = e.Exponent(equation.substring(y + 1));
                     equation = equation.substring(0, y + 1) + n;
+                } else if (t2 == 0) {
+                    String t3 = Character.toString(order.charAt(t2 + 1));
+                    String t4 = equation.substring(test);
+                    int t5 = equation.length() - t4.length() + t4.indexOf(t3);
+                    double n = e.Exponent(equation.substring(0, t5));
+                    equation = n + equation.substring(t5);
                 } else {
                     String t3 = Character.toString(order.charAt(t2 + 1));
                     String t4 = equation.substring(test);
