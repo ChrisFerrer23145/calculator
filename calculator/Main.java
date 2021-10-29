@@ -4,7 +4,7 @@ public class Main {
 	    Extra e = new Extra();
 	    Base b = new Base();
 	    Components c = new Components();
-	   // System.out.println(e.SendOff("(1+(20)-16/4^2)/((5-3)^2+12/2)", ""));
+	   	//System.out.println(e.SendOff("55*(169/(156^3)-61)/74+175*(29^2/42)", ""));
 		int i = 0;
 		for (i=0;i<i+1;i++) {
         	Scanner myobj = new Scanner(System.in);
