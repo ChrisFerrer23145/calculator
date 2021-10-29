@@ -245,4 +245,69 @@ public class Components {
         }
     return equation + "=" + order;
     }
+    
+    public String Trig(String equation, String order) {
+        int i = 0;
+        Base b = new Base();
+        for (i=0;i<order.length;i++) {
+            if(equation.contains(flags[8]) || equation.contains(flags[9]) || equation.contains(flags[10])) {
+                if (equation.contains(flags[8])) {
+                    int test = equation.indexOf("t");
+                    int t2 = order.indexOf("t");
+                    if (t2 == order.length() - 1) {
+                        double n = b.Trig(equation.substring(test + 1));
+                        equation = equation.substring(0, test) + n;
+                    } else {
+                        String t1 = Character.toString(order.charAt(t2 + 1));
+                        int t3 = equation.indexOf(t1, test);
+                        double n = b.Trig(equation.substring(test + 1, t3));
+                        equation = equation.substring(0, test) + n + equation.substring(t3);
+                    }
+                    int orem = order.indexOf(flags[8]);
+                    if (orem + 1 > order.length() - 1) {
+                        order = order.substring(0, orem);
+                    } else {
+                        order = order.substring(0, orem) + order.substring(orem + 1);
+                    }      
+                } else if (equation.contains(flags[9])) {
+                    int test = equation.indexOf("s");
+                    int t2 = order.indexOf("s");
+                    if (t2 == order.length() - 1) {
+                        double n = b.Trig(equation.substring(test + 1));
+                        equation = equation.substring(0, test) + n;
+                    } else {
+                        String t1 = Character.toString(order.charAt(t2 + 1));
+                        int t3 = equation.indexOf(t1, test);
+                        double n = b.Trig(equation.substring(test + 1, t3));
+                        equation = equation.substring(0, test) + n + equation.substring(t3);
+                    }
+                    int orem = order.indexOf(flags[9]);
+                    if (orem + 1 > order.length() - 1) {
+                        order = order.substring(0, orem);
+                    } else {
+                        order = order.substring(0, orem) + order.substring(orem + 1);
+                    }
+            } else if (equation.contains(flags[10])) {
+                    int test = equation.indexOf("c");
+                    int t2 = order.indexOf("c");
+                    if (t2 == order.length() - 1) {
+                        double n = b.Trig(equation.substring(test + 1));
+                        equation = equation.substring(0, test) + n;
+                    } else {
+                        String t1 = Character.toString(order.charAt(t2 + 1));
+                        int t3 = equation.indexOf(t1, test);
+                        double n = b.Trig(equation.substring(test + 1, t3));
+                        equation = equation.substring(0, test) + n + equation.substring(t3);
+                    }
+                    int orem = order.indexOf(flags[10]);
+                    if (orem + 1 > order.length() - 1) {
+                        order = order.substring(0, orem);
+                    } else {
+                        order = order.substring(0, orem) + order.substring(orem + 1);
+                    }
+                }
+                return equation + "=" + order;
+            }
+        }
+    }
 }
