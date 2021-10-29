@@ -79,4 +79,40 @@ public class Base {
         }
         return((st1/st2));
     }
+    double Trig(String equation){
+        String eq2;
+        double st2;
+        if (equation.contains("t")) {
+            int point = equation.indexOf("t");
+            if (!equation.substring(point + 1).contains(".")) {
+                eq2 = equation.substring(point + 1) + ".0";
+                st2 = Double.parseDouble(eq2);
+            } else {
+                st2 = Double.parseDouble(equation.substring(point + 1));
+            }
+            double rad = Math.toRadians(st2);
+            return((Math.tan(st2)));
+        } else if (equation.contains("s")){
+            int point = equation.indexOf("s");
+            if (!equation.substring(point + 1).contains(".")) {
+                eq2 = equation.substring(point + 1) + ".0";
+                st2 = Double.parseDouble(eq2);
+            } else {
+                st2 = Double.parseDouble(equation.substring(point + 1));
+            }
+            double rad = Math.toRadians(st2);
+            return((Math.sin(st2)));
+        } else if (equation.contains("c")) {
+            int point = equation.indexOf("c");
+            if (!equation.substring(point + 1).contains(".")) {
+                eq2 = equation.substring(point + 1) + ".0";
+                st2 = Double.parseDouble(eq2);
+            } else {
+                st2 = Double.parseDouble(equation.substring(point + 1));
+            }
+            double rad = Math.toRadians(st2);
+            return((Math.cos(st2)));
+        }
+        return 0.0;
+    }
 }
