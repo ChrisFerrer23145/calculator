@@ -246,7 +246,7 @@ public class Components {
     return equation + "=" + order;
     }
     
-    public String Trig(String equation, String order) {
+    /* public String Trig(String equation, String order) {
         int i = 0;
         Base b = new Base();
         for (i=0;i<order.length;i++) {
@@ -309,5 +309,5 @@ public class Components {
                 return equation + "=" + order;
             }
         }
-    }
+    } */
 }
