@@ -9,7 +9,7 @@ public class Main {
 		for (i=0;i<i+1;i++) {
         	Scanner myobj = new Scanner(System.in);
 			if (i==0) {
-        	    System.out.println("Enter equation. For addition, use a '+' between each number. For subtraction, use a '-'. For multiplication use '*', and for division use '/'. Square roots use percents, so '%25' prints '5.0'. Exponents use '^', so '5^3' prints '125.0'. For example, to do addition, you would use '691+234', which would print '925.0'. You can even combine equations, and the program will sort it out in order of operations! For example, '25*5/5+10*2' will print '45.0'! Decimals can be taken in as any number, and every response is printed as a decimal!");
+        	    System.out.println("Enter equation. For addition, use a '+' between each number. For subtraction, use a '-'. For multiplication use '*', and for division use '/'. Square roots use percents, so '%25' prints '5.0'. Exponents use '^', so '5^3' prints '125.0'. For example, to do addition, you would use '691+234', which would print '925.0'. You can even combine equations, and the program will sort it out in order of operations! For example, '25*5/5+10*2' will print '45.0'! Decimals can be taken in as any number, and every response is printed as a decimal! Parenthesis are allowed, so something like '55*(16900/(156^3)-61)/74+175*(29^2/42)' will print '3503.342402498653'!");
 			} else {
 				System.out.println("Enter next equation");
 			}
